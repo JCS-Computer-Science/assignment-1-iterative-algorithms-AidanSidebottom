@@ -4,29 +4,17 @@ function insertionSort(array) {
 	 ** before it over and over as long as the element before it
 	 ** is bigger
 	 */
-	//  function insertionSort(inputArr) {
-	// 	let n = inputArr.length;
-	// 		for (let i = 1; i < n; i++) {
-	// 			// Choosing the first element in our unsorted subarray
-	// 			let current = inputArr[i];
-	// 			// The last element of our sorted subarray
-	// 			let j = i-1; 
-	// 			while ((j > -1) && (current < inputArr[j])) {
-	// 				inputArr[j+1] = inputArr[j];
-	// 				j--;
-	// 			}
-	// 			inputArr[j+1] = current;
-	// 		}
-	// 	return inputArr;
-	// }
-		for (let i = 0; i < array.length; i++) {
-			let firstElement = array[i]
-			let secondElement = array[i++]
-			if(firstElement>secondElement){
-				array[firstelement+1]=array[firstelement];
-			}
-		}
 
+	let length = array.length;
+		for (let i = 1; i < length; i++){
+		let element1 = array[i];
+		let index2 = i-1;
+		while((index2 > -1)&&(element1 < array[index2])){
+		index2--;
+		}
+		array[index2+1]=element1;
+		}
+	console.log(array)
 	return array;
 }
 

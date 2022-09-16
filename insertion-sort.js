@@ -4,18 +4,17 @@ function insertionSort(array) {
 	 ** before it over and over as long as the element before it
 	 ** is bigger
 	 */
+	
+		for (let i = 1; i < array.length; i++) {
+		  let currentValue = array[i]
+		  let j
+		  for (j = i - 1; j >= 0 && array[j] > currentValue; j--) {
+			array[j + 1] = array[j]
+		  }
+		  array[j + 1] = currentValue
+		}
+		return array
+	}
 
-	let length = array.length;
-		for (let i = 1; i < length; i++){
-		let element1 = array[i];
-		let index2 = i-1;
-		while((index2 > -1)&&(element1 < array[index2])){
-		index2--;
-		}
-		array[index2+1]=element1;
-		}
-	console.log(array)
-	return array;
-}
 
 module.exports = insertionSort;

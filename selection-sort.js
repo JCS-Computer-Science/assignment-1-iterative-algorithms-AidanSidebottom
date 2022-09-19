@@ -6,7 +6,12 @@ function selectionSort(array) {
 	 ** for the smallest, then swap it with the second element.
 	 ** Continue like this until you have only one element left.
 	 */
+	let smallest= Math.min(array);
+	console.log(smallest);
+	for (let index = 0; index < array.length; index++) {
 	
+		
+	}
 	return array;
 }
 
